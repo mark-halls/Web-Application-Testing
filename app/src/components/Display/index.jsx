@@ -1,10 +1,11 @@
 import React from "react";
 
 const Display = props => {
+  const { ball, strike } = props.scoreboard;
   return (
     <div>
-      <p>Balls: </p>
-      <p>Strikes: </p>
+      <p>Balls: {ball}</p>
+      <p>Strikes: {strike}</p>
     </div>
   );
 };

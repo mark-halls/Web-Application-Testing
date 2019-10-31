@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 
 const Dashboard = ({ scoreboard, setScoreboard }) => {
   const strike = useCallback(() => {
-    const strikes = scoreboard.strike++;
+    const strikes = ++scoreboard.strike;
     if (strikes >= 3) {
       setScoreboard({ ...scoreboard, ball: 0, strike: 0 });
     } else {
@@ -11,7 +11,7 @@ const Dashboard = ({ scoreboard, setScoreboard }) => {
   }, [scoreboard, setScoreboard]);
 
   const ball = useCallback(() => {
-    const balls = scoreboard.ball++;
+    const balls = ++scoreboard.ball;
     if (balls >= 4) {
       setScoreboard({ ...scoreboard, ball: 0, strike: 0 });
     } else {
